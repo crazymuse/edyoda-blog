@@ -1,0 +1,201 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Header/Blog Title */
+.my-base-header {
+  color: rgb(230,230,230);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Navigation bar */
+
+.nav {
+  height: 50px;
+  background-color: #4d4d4d;
+  position: fixed;
+  top: 0;
+  font-family: Arial;
+  padding-right: 20px;
+  margin-right: 300px;
+  width: 100%;
+
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+
+/* ----- Jumbotron ---------- */
+
+.my-base-jumboclass { 
+  width: 110% !important;
+  height: 200px !important;
+  overflow-x: hidden !important;
+  margin-top: 50px !important ;
+}
+
+.my-base-container {
+  width: 100%; /* specify a width */
+  margin: 0 auto;  /* centers the container */
+}
+
+.my-base-jumboclass .my-base-container { 
+  max-width: 100%; /* allows the jumbotron to adjust on smaller widths */
+  background-color: #364f6b;
+}
+
+
+.my-base-jumboclass h1 { 
+  text-align: center; /* centers the heading */
+  color: #DDD;
+  font-weight: 600;
+}
+
+.my-base-h1 {
+  width: 110% !important;
+  height: 200px !important;
+  overflow-x: hidden !important;
+  margin-top: 50px !important ;
+  background-color: #364f6b !important;
+  font-size: 70px !important;
+  font-weight: 400 !important;
+  font-family: 'Raleway', sans-serif !important;
+  padding-top: 100px;
+  color: #DDD;
+  line-height: 0px !important;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+
+{% extends 'blogs/indexbase.html' %}
+
+
+{% block content %}
+    {% if blogs_list %}
+		{% for blog in blogs_list %}    
+	    <div class="card">
+	      <h2>{{blog.title}}</h2>
+	      <h5>{{ blog.first_published }} </h5>
+	      <!--div class="fakeimg" style="height:200px;">Image</div-->
+	      <p>{{blog.body}}</p>
+	    <h5>Published by : {{ blog.user.username }} </h5>
+	    </div>
+	    {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block loginstatus %}
+Login/Signup
+{% endblock %}
+
