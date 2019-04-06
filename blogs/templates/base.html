@@ -29,10 +29,10 @@
     <a href="{% url 'index' %}" >Home</a>
     <a href="{% url 'write' %}" >New-Post</a>
     <a href="{% url 'profile' %}" >Profile</a>
-    <a href="{% url 'login' %}" >
-
     {% block loginstatus %}
-    {% endblock %}</a>
+    <a href="{% url 'login' %}" >
+    </a>
+    {% endblock %}
 
   </div>
 </div>
